@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="1056.0" styleClass="root" stylesheets="@/app/controllers/app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <VBox fx:id="scene" prefHeight="550.0" prefWidth="270.0" styleClass="scene">
+         <children>
+            <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="65.0" prefWidth="212.0" text="Player options" textAlignment="CENTER" underline="true" textFill="#c3d0d4">
+                     <font>
+                        <Font size="27.0"  name="Century Gothic"/>
+                     </font></Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="150.0" text="Re-Play?" onAction="#ReDoGame">
+                     <font>
+                        <Font name="Century Gothic" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefWidth="261.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button fx:id="swapButton"  alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#swap" prefHeight="70.0" prefWidth="150.0" text="Chat...">
+                     <padding>
+                        <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="Century Gothic" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Pane fx:id="Msg" prefHeight="550.0" prefWidth="786.0" visible="false" styleClass="msgClass">
+         <children>
+            <TextField layoutX="59.0" layoutY="511.0" text="Type here..." />
+            <Button layoutX="14.0" layoutY="27.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="90.0" text="Call" onAction="#Call"/>
+            <Button layoutX="156.0" layoutY="29.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="90.0" text="Video Chat" onAction="#Video"/>
+         </children>
+      </Pane>
+      <Pane fx:id="Loja" layoutX="270.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" >
+         <fx:include source="/Loja/loja/loja.fxml"/>
+      </Pane>
+   </children>
+</AnchorPane>
